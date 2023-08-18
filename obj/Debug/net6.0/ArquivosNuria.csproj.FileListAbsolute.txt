@@ -1,0 +1,15 @@
+C:\Users\raule\Documents\Projetos\Visual Studio\ArquivosNuria\obj\Debug\net6.0\ArquivosNuria.csproj.AssemblyReference.cache
+C:\Users\raule\Documents\Projetos\Visual Studio\ArquivosNuria\obj\Debug\net6.0\ArquivosNuria.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\raule\Documents\Projetos\Visual Studio\ArquivosNuria\obj\Debug\net6.0\ArquivosNuria.AssemblyInfoInputs.cache
+C:\Users\raule\Documents\Projetos\Visual Studio\ArquivosNuria\obj\Debug\net6.0\ArquivosNuria.AssemblyInfo.cs
+C:\Users\raule\Documents\Projetos\Visual Studio\ArquivosNuria\obj\Debug\net6.0\ArquivosNuria.csproj.CoreCompileInputs.cache
+C:\Users\raule\Documents\Projetos\Visual Studio\ArquivosNuria\bin\Debug\net6.0\ArquivosNuria.exe
+C:\Users\raule\Documents\Projetos\Visual Studio\ArquivosNuria\bin\Debug\net6.0\ArquivosNuria.deps.json
+C:\Users\raule\Documents\Projetos\Visual Studio\ArquivosNuria\bin\Debug\net6.0\ArquivosNuria.runtimeconfig.json
+C:\Users\raule\Documents\Projetos\Visual Studio\ArquivosNuria\bin\Debug\net6.0\ArquivosNuria.dll
+C:\Users\raule\Documents\Projetos\Visual Studio\ArquivosNuria\bin\Debug\net6.0\ArquivosNuria.pdb
+C:\Users\raule\Documents\Projetos\Visual Studio\ArquivosNuria\obj\Debug\net6.0\ArquivosNuria.dll
+C:\Users\raule\Documents\Projetos\Visual Studio\ArquivosNuria\obj\Debug\net6.0\refint\ArquivosNuria.dll
+C:\Users\raule\Documents\Projetos\Visual Studio\ArquivosNuria\obj\Debug\net6.0\ArquivosNuria.pdb
+C:\Users\raule\Documents\Projetos\Visual Studio\ArquivosNuria\obj\Debug\net6.0\ArquivosNuria.genruntimeconfig.cache
+C:\Users\raule\Documents\Projetos\Visual Studio\ArquivosNuria\obj\Debug\net6.0\ref\ArquivosNuria.dll
