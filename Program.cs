@@ -1,6 +1,8 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Diagnostics;
 using System.Security.Cryptography;
+using MoverArquivos.Entities;
 
 namespace MoverArquivos
 {
@@ -8,55 +10,80 @@ namespace MoverArquivos
     {
         static void Main(string[] args)
         {
-            String line;
-            string[] vet = new string[3];
-            try
+            NewCommand:
+            Console.Write("> ");
+            string comando = Console.ReadLine();
+            string[] vet = comando.Split(" ");
+            int verification = 0;
+            switch (comando)
             {
-                Process cmd = new Process();
-                //Pass the file path and file name to the StreamReader constructor
-                StreamReader sr = new StreamReader("C:\\Users\\raule\\Desktop\\nomes.txt");
-                //Read the first line of text
-                line = (sr.ReadLine()).Trim();
-                //Continue to read until you reach end of file
-                while (line != null)
+                case ("ajuda"):
+                    HelpInterface hi2 = new HelpInterface();
+                    Console.WriteLine(hi2);
+                    verification++;
+                    break;
+                case ("exit"):
+                    Environment.Exit(1);
+                    break;
+                case ("help"):
+                    HelpInterface hi1 = new HelpInterface();
+                    Console.WriteLine(hi1);
+                    verification++;
+                    break;
+                case ("clear"):
+                    Console.Clear();
+                    verification++;
+                    break;
+                default:
+                    Console.WriteLine("Unrecognized command.");
+                    Console.WriteLine("Commands are all lowercase. Try again");
+                    Console.WriteLine();
+                    verification++;
+                    break;
+            }
+            if (verification == 0)
+            {
+                switch (vet[0])
                 {
+                    case ("copy"):
+                        switch (vet[1])
+                        {
+                            case ("-adb"):
+                                try { CopyData.WithAdb(vet[2], vet[3], vet[4]); }
+                                catch (Exception e) { Console.WriteLine("Exception: " + e.Message); }
+                                finally { Console.WriteLine("The work is done. (•◡•)"); }
+                                break;
+                            case ("-cmd"):
+                                try { CopyData.WithCmd(vet[2], vet[3], vet[4]); }
+                                catch (Exception e) { Console.WriteLine("Exception: " + e.Message); }
+                                finally { Console.WriteLine("The work is done. (•◡•)"); }
+                                break;
+                            default:
+                                Console.WriteLine("Unrecognized command.");
+                                Console.WriteLine("Commands are all lowercase. Try again");
+                                Console.WriteLine();
+                                break;
+                        }
 
-                    string[] words = line.Split(' ');
-                    int i = 0;
-                    foreach (string word in words)
-                    {                    
-                        vet[i] = word;
-                        i++;
-                    }
-                    for (int u = 0; u < 3; u++)
-                    {
-                        string command = "/C adb pull /sdcard/DCIM/Camera/" + vet[u] + " E:/FamiliaPaiva/FotosNuria";
-                        cmd = Process.Start("cmd.exe", command);
-                    }
-
-                    //write the line to console window
-                    Console.WriteLine(line);
-
-                    Thread.Sleep(10000);
-                    cmd.Kill();
-                    cmd.Close();
-                                 
-                    //Read the next line
-                    line = (sr.ReadLine()).Trim();
+                        break;
+                    case ("move"):
+                        switch (vet[1])
+                        {
+                            case ("-cmd"):
+                                try { MoveData.WithCmd(vet[2], vet[3], vet[4]); }
+                                catch (Exception e) { Console.WriteLine("Exception: " + e.Message); }
+                                finally { Console.WriteLine("The work is done. (•◡•)"); }
+                                break;
+                        }
+                        break;
+                    default:
+                        Console.WriteLine("Unrecognized command.");
+                        Console.WriteLine("Commands are all lowercase. Try again");
+                        Console.WriteLine();
+                        break;
                 }
-                //close the file
-                sr.Close();
-                Console.ReadLine();
             }
-            catch (Exception e)
-            {
-                Console.WriteLine("Exception: " + e.Message);
-            }
-            finally
-            {
-                Console.WriteLine("Executing finally block.");
-            }
-            
+            goto NewCommand;        
         }
     }
 }

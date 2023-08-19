@@ -13,3 +13,18 @@ C:\Users\raule\Documents\Projetos\Visual Studio\MoverArquivos\obj\Debug\net6.0\r
 C:\Users\raule\Documents\Projetos\Visual Studio\MoverArquivos\obj\Debug\net6.0\MoverArquivos.pdb
 C:\Users\raule\Documents\Projetos\Visual Studio\MoverArquivos\obj\Debug\net6.0\MoverArquivos.genruntimeconfig.cache
 C:\Users\raule\Documents\Projetos\Visual Studio\MoverArquivos\obj\Debug\net6.0\ref\MoverArquivos.dll
+C:\Users\raule\Documents\Projetos\MoverArquivos\obj\Debug\net6.0\MoverArquivos.csproj.AssemblyReference.cache
+C:\Users\raule\Documents\Projetos\MoverArquivos\obj\Debug\net6.0\MoverArquivos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\raule\Documents\Projetos\MoverArquivos\obj\Debug\net6.0\MoverArquivos.AssemblyInfoInputs.cache
+C:\Users\raule\Documents\Projetos\MoverArquivos\obj\Debug\net6.0\MoverArquivos.AssemblyInfo.cs
+C:\Users\raule\Documents\Projetos\MoverArquivos\obj\Debug\net6.0\MoverArquivos.csproj.CoreCompileInputs.cache
+C:\Users\raule\Documents\Projetos\MoverArquivos\obj\Debug\net6.0\MoverArquivos.dll
+C:\Users\raule\Documents\Projetos\MoverArquivos\obj\Debug\net6.0\refint\MoverArquivos.dll
+C:\Users\raule\Documents\Projetos\MoverArquivos\obj\Debug\net6.0\MoverArquivos.pdb
+C:\Users\raule\Documents\Projetos\MoverArquivos\bin\Debug\net6.0\MoverArquivos.exe
+C:\Users\raule\Documents\Projetos\MoverArquivos\bin\Debug\net6.0\MoverArquivos.deps.json
+C:\Users\raule\Documents\Projetos\MoverArquivos\bin\Debug\net6.0\MoverArquivos.runtimeconfig.json
+C:\Users\raule\Documents\Projetos\MoverArquivos\bin\Debug\net6.0\MoverArquivos.dll
+C:\Users\raule\Documents\Projetos\MoverArquivos\bin\Debug\net6.0\MoverArquivos.pdb
+C:\Users\raule\Documents\Projetos\MoverArquivos\obj\Debug\net6.0\MoverArquivos.genruntimeconfig.cache
+C:\Users\raule\Documents\Projetos\MoverArquivos\obj\Debug\net6.0\ref\MoverArquivos.dll
