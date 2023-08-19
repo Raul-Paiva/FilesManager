@@ -8,7 +8,7 @@
                 "Interface de Ajuda \n" + 
                 "\n" +
                 "   ajuda -> Abre a interface de ajuda(help).\n" +
-                "   clear -> Cleans the prompt." +
+                "   clear -> Cleans the prompt.\n" +
                 "   copy [-adb or -cmd] [-all or files.txt(directory)] [from where the files come(directory)] [for where the files go(directory)]\n" +
                 "           -> Copies one or more files to another location;\n" +
                 "           - [-adb] -> copy from a device connected by ADB;\n" +
