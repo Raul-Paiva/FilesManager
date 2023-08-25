@@ -10,13 +10,17 @@ namespace MoverArquivos
     {
         static void Main(string[] args)
         {
-            NewCommand:
+        NewCommand:
+            ErrorInterface error = new ErrorInterface();
             Console.Write("> ");
             string comando = Console.ReadLine();
             string[] vet = comando.Split(" ");
             int verification = 0;
             switch (comando)
             {
+                case (""):
+                    verification++;
+                    break;
                 case ("ajuda"):
                     HelpInterface hi2 = new HelpInterface();
                     Console.WriteLine(hi2);
@@ -34,56 +38,61 @@ namespace MoverArquivos
                     Console.Clear();
                     verification++;
                     break;
-                default:
-                    Console.WriteLine("Unrecognized command.");
-                    Console.WriteLine("Commands are all lowercase. Try again");
-                    Console.WriteLine();
-                    verification++;
-                    break;
             }
             if (verification == 0)
             {
-                switch (vet[0])
+                if (vet[0] == "copy")
                 {
-                    case ("copy"):
-                        switch (vet[1])
+                    if (vet.Length == 5)
+                    {
+                        if (vet[1] == "-adb")
                         {
-                            case ("-adb"):
-                                try { CopyData.WithAdb(vet[2], vet[3], vet[4]); }
-                                catch (Exception e) { Console.WriteLine("Exception: " + e.Message); }
-                                finally { Console.WriteLine("The work is done. (•◡•)"); }
-                                break;
-                            case ("-cmd"):
-                                try { CopyData.WithCmd(vet[2], vet[3], vet[4]); }
-                                catch (Exception e) { Console.WriteLine("Exception: " + e.Message); }
-                                finally { Console.WriteLine("The work is done. (•◡•)"); }
-                                break;
-                            default:
-                                Console.WriteLine("Unrecognized command.");
-                                Console.WriteLine("Commands are all lowercase. Try again");
-                                Console.WriteLine();
-                                break;
+                            try { CopyData.WithAdb(vet[2], vet[3], vet[4]); }
+                            catch (Exception e) { Console.WriteLine("Exception: " + e.Message); }
+                            finally { Console.WriteLine("The work is done."); }
                         }
-
-                        break;
-                    case ("move"):
-                        switch (vet[1])
+                        else if (vet[1] == "-cmd")
                         {
-                            case ("-cmd"):
-                                try { MoveData.WithCmd(vet[2], vet[3], vet[4]); }
-                                catch (Exception e) { Console.WriteLine("Exception: " + e.Message); }
-                                finally { Console.WriteLine("The work is done. (•◡•)"); }
-                                break;
+                            try { CopyData.WithCmd(vet[2], vet[3], vet[4]); }
+                            catch (Exception e) { Console.WriteLine("Exception: " + e.Message); }
+                            finally { Console.WriteLine("The work is done."); }
                         }
-                        break;
-                    default:
-                        Console.WriteLine("Unrecognized command.");
-                        Console.WriteLine("Commands are all lowercase. Try again");
-                        Console.WriteLine();
-                        break;
+                        else { Console.WriteLine(ErrorInterface.Code("ERROR_0002")); }
+                    }
+                    else { Console.WriteLine(ErrorInterface.Code("ERROR_0003")); }
                 }
+                else if (vet[0] == "move")
+                {
+                    if (vet.Length == 5)
+                    {
+                        if (vet[1] == "-cmd")
+                        {
+                            try { MoveData.WithCmd(vet[2], vet[3], vet[4]); }
+                            catch (Exception e) { Console.WriteLine("Exception: " + e.Message); }
+                            finally { Console.WriteLine("The work is done!"); }
+                        }
+                        else { Console.WriteLine(ErrorInterface.Code("ERROR_0002")); }
+                    }
+                    else { Console.WriteLine(ErrorInterface.Code("ERROR_0003")); }
+
+                }
+                else if (vet[0] == "organize")
+                {
+                    if (vet.Length == 3)
+                    {
+                        if (vet[1] == "-type")
+                        {
+                            try { OrganizeData.ByType(vet[2]); }
+                            catch (Exception e) { Console.WriteLine("Exception: " + e.Message); }
+                            finally { Console.WriteLine("The work is done!"); }
+                        }
+                        else { Console.WriteLine(ErrorInterface.Code("ERROR_0002")); }
+                    }
+                    else { Console.WriteLine(ErrorInterface.Code("ERROR_0003")); }
+                }
+                else { Console.WriteLine(ErrorInterface.Code("ERROR_0001")); }
             }
-            goto NewCommand;        
+            goto NewCommand;
         }
     }
 }
